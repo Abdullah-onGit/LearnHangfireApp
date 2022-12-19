@@ -4,7 +4,8 @@
 
 Update Connection string for sql server based on you system config in all application appsettings.json file.
 then start all the applications and check the console logs
-you can change log level for hangfire in appsettings.json file "Hangfire": "Trace" for more detailed logs from hangfire
+you can change log level for hangfire in appsettings.json file "Hangfire": "Trace" for more detailed logs from hangfire.
+From more details check offical docs https://docs.hangfire.io/en/latest/getting-started/index.html
 
 ## How it works
 Hangfire use seperate process than running application, but it still use high resource from the system if deployed in same server
