@@ -4,7 +4,8 @@
 
 Update Connection string for sql server based on you system config in all application appsettings.json file.
 then start all the applications and check the console logs
-you can change log level for hangfire in appsettings.json file "Hangfire": "Trace" for more detailed logs from hangfire
+you can change log level for hangfire in appsettings.json file "Hangfire": "Trace" for more detailed logs from hangfire.
+From more details check offical docs https://docs.hangfire.io/en/latest/getting-started/index.html
 
 ## How it works
 Hangfire use seperate process than running application, but it still use high resource from the system if deployed in same server
@@ -21,4 +22,4 @@ Hangfire is a .NET library that can be used to schedule and execute background j
 
 RabbitMQ, on the other hand, is an open-source message broker that implements the Advanced Message Queuing Protocol (AMQP). It can be used to decouple application components and enable asynchronous communication between them. RabbitMQ is a more general-purpose solution that can be used in a variety of scenarios, including background job processing, but it is not specifically tailored for this use case like Hangfire is and it didn't relay on database server.
 
-In summary, if you are looking for a simple and easy-to-use solution for scheduling and executing background jobs in a .NET application, Hangfire might be a good choice. If you need a more general-purpose message broker for asynchronous communication between components in your system, RabbitMQ might be a better fit.
+In summary, using a message broker like RabbitMQ can be a good choice for running jobs efficiently in separate container instances and scaling out. It can be a more flexible and scalable solution compared to using something like Hangfire, which is more tightly coupled to the main application.
