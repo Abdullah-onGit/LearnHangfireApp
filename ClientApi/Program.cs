@@ -10,8 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 var _services = builder.Services;
 var _config = builder.Configuration;
 
-_services.AddScoped<IReportService, ReportService>();
-_services.AddScoped<IReportRepostory, ReportRepostory>();
+_services.AddCommonServices();
 // Add Hangfire services.
 _services.AddHangfire(configuration => configuration
     .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
